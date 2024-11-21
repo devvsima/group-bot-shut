@@ -9,20 +9,17 @@ from database.service.group import add_user_to_group
 class UsersMiddleware(BaseMiddleware):
     @staticmethod
     async def on_process_message(message: Message, data: dict):
-        # Игнорируем сообщения из каналов, но обрабатываем из групп и приватных чатов
+
         if message.chat.type == 'channel':
             raise CancelHandler()
 
-        await message.answer_chat_action('typing')
+        # await message.answer_chat_action('typing')
 
         user = message.from_user
         
-        # Устанавливаем значение по умолчанию для language_code, если оно отсутствует
-        language_code = user.language_code or "en"
-        
-        # Получаем или создаем пользователя
-        data['user'] = get_or_create_user(user.id, user.username, language_code)
-        add_user_to_group(user.id, user.username, message.chat.id, message.chat.title)
+        data['user'] = get_or_create_user(user.id, user.username, user.language_code)
+        if message.chat.title:
+            add_user_to_group(user.id, user.username, message.chat.id, message.chat.title)
         
     @staticmethod
     async def on_process_callback_query(callback_query: CallbackQuery, data: dict):

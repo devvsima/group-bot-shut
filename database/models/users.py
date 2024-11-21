@@ -8,6 +8,6 @@ class Users(BaseModel):
    username = CharField(default=None, null=True)
    language = CharField(default='en')
    role=CharField(default='user')
-   coin = BigIntegerField(default=0)
+   coins = BigIntegerField(default=0)
    created_at = DateTimeField(default=lambda: datetime.utcnow())
 

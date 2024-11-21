@@ -6,7 +6,7 @@ from utils.logging import logger
 
 async def on_startup(_):
     from app.commands import set_default_commands
-    await set_default_commands()
+    # await set_default_commands()
     logger.info("~ Bot_startup")
 
 async def on_shutdown(dispatcher: Dispatcher):

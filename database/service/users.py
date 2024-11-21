@@ -20,3 +20,6 @@ def create_user(id: int, username: str = None, language: str = None) -> Users:
     logger.info(f"New user {username} | {id}")
     new_user = Users.create(id=id, username=username, language=language)
     return new_user
+
+def change_language(id: int, language: str):
+    Users.update(language=language).where(Users.id == id).execute()

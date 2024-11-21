@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bot VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-09-09 21:15+0300\n"
+"POT-Creation-Date: 2024-11-21 21:10+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,20 +17,72 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 
-#: app/handlers/admin/admin_panel.py:11
-msgid "You admin!"
-msgstr ""
-
-#: app/handlers/user/help.py:11
-msgid "Help 🆘"
-msgstr ""
-
-#: app/handlers/user/settings.py:11
-msgid "You settings ⚙️"
-msgstr ""
-
-#: app/handlers/user/start.py:8
+#: app/handlers/msg_text.py:9
 msgid "👋, <a href='tg://user?id={}'>{}</a>"
+msgstr ""
+
+#: app/handlers/msg_text.py:12
+msgid "Выберите язык, на который вы хотите переключиться: 🌐"
+msgstr ""
+
+#: app/handlers/msg_text.py:16
+msgid "Ваш язык успешно изменён! ✅"
+msgstr ""
+
+#: app/handlers/msg_text.py:20
+msgid "У тебя - <code>{}$</code> 🐽"
+msgstr ""
+
+#: app/handlers/msg_text.py:24
+msgid "Вы получили <code>{}$</code> 🐽"
+msgstr ""
+
+#: app/handlers/msg_text.py:28
+msgid ""
+"Зай тише будь...\n"
+"Следующая добыча через {}ч {}м {}с."
+msgstr ""
+
+#: app/handlers/msg_text.py:32
+msgid "Заюш думаю, что вероятность {}% 👯‍♂️"
+msgstr ""
+
+#: app/handlers/msg_text.py:36
+msgid ""
+"<blockquote>{}</blockquote> 💞 <blockquote>{}</blockquote>\n"
+"\n"
+"Lюбov рильно"
+msgstr ""
+
+#: app/handlers/msg_text.py:40
+msgid "💫✨Звезды шепчут, что <code>{}</code> {}"
+msgstr ""
+
+#: app/handlers/msg_text.py:44
+msgid ""
+"\n"
+"Ферма – собирай монеты (1–60) раз в 6 часов.\n"
+"Шура кто... – выбирает из предложенных вариантов. \n"
+"Шура инфа... – показывает шансы на успех. \n"
+"Шура мнение... – отвечает 'да' или 'нет'.\n"
+"Шип – соединяет двух участников чата. 💘\n"
+"Зов гоев – отмечает всех участников чата. 🐑 "
+msgstr ""
+
+#: app/handlers/admin/admin_panel.py:11
+msgid "Вы админ!"
+msgstr ""
+
+#: app/handlers/user/shura.py:38
+msgid "Да"
+msgstr ""
+
+#: app/handlers/user/shura.py:38
+msgid "Нет"
+msgstr ""
+
+#: app/handlers/user/shura.py:38
+msgid "В душе не ебу"
 msgstr ""
 
 #: app/middlewares/throttling.py:35

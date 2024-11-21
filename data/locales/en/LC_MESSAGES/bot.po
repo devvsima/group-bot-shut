@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bot VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-09-09 21:15+0300\n"
+"POT-Creation-Date: 2024-11-21 21:10+0200\n"
 "PO-Revision-Date: 2024-09-09 21:15+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -18,21 +18,82 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 
-#: app/handlers/admin/admin_panel.py:11
-msgid "You admin!"
-msgstr ""
-
-#: app/handlers/user/help.py:11
-msgid "Help 🆘"
-msgstr ""
-
-#: app/handlers/user/settings.py:11
-msgid "You settings ⚙️"
-msgstr ""
-
-#: app/handlers/user/start.py:8
+#: app/handlers/msg_text.py:9
 msgid "👋, <a href='tg://user?id={}'>{}</a>"
 msgstr ""
+
+#: app/handlers/msg_text.py:12
+msgid "Выберите язык, на который вы хотите переключиться: 🌐"
+msgstr "Select the language you want to switch to: 🌐"
+
+#: app/handlers/msg_text.py:16
+msgid "Ваш язык успешно изменён! ✅"
+msgstr "Your language has been successfully changed! ✅"
+
+#: app/handlers/msg_text.py:20
+msgid "У тебя - <code>{}$</code> 🐽"
+msgstr "You've got <code>{}$</code> 🐽"
+
+#: app/handlers/msg_text.py:24
+msgid "Вы получили <code>{}$</code> 🐽"
+msgstr "You got <code>{}$</code> 🐽"
+
+#: app/handlers/msg_text.py:28
+msgid ""
+"Зай тише будь...\n"
+"Следующая добыча через {}ч {}м {}с."
+msgstr "The next prize is in {}h {}m {}sec."
+
+#: app/handlers/msg_text.py:32
+msgid "Заюш думаю, что вероятность {}% 👯‍♂️"
+msgstr "I think the odds are {}% 👯‍♂️"
+
+#: app/handlers/msg_text.py:36
+msgid ""
+"<blockquote>{}</blockquote> 💞 <blockquote>{}</blockquote>\n"
+"\n"
+"Lюбov рильно"
+msgstr ""
+"<blockquote>{}</blockquote> 💞 <blockquote>{}</blockquote>\n"
+"\n"
+"Love"
+
+#: app/handlers/msg_text.py:40
+msgid "💫✨Звезды шепчут, что <code>{}</code> {}"
+msgstr "💫✨The stars whisper that <code>{}</code> {}"
+
+#: app/handlers/msg_text.py:44
+#, fuzzy
+msgid ""
+"\n"
+"Ферма – собирай монеты (1–60) раз в 6 часов.\n"
+"Шура кто... – выбирает из предложенных вариантов. \n"
+"Шура инфа... – показывает шансы на успех. \n"
+"Шура мнение... – отвечает 'да' или 'нет'.\n"
+"Шип – соединяет двух участников чата. 💘\n"
+"Зов гоев – отмечает всех участников чата. 🐑 "
+msgstr ""
+"\n"
+"Farm - collect coins (1-60) every 6 hours. \n"
+"Shura who. - chooses from the given options. \n"
+"Shura info... - shows the odds of success. \n"
+
+
+#: app/handlers/admin/admin_panel.py:11
+msgid "Вы админ!"
+msgstr "You're an admin!"
+
+#: app/handlers/user/shura.py:38
+msgid "Да"
+msgstr "Yes"
+
+#: app/handlers/user/shura.py:38
+msgid "Нет"
+msgstr "No"
+
+#: app/handlers/user/shura.py:38
+msgid "В душе не ебу"
+msgstr "I don't know"
 
 #: app/middlewares/throttling.py:35
 msgid "Too many requests!"

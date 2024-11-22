@@ -2,7 +2,6 @@ from peewee import CharField, BigIntegerField, DateTimeField, ForeignKeyField, T
 import json
 from playhouse.db_url import connect
 
-from datetime import datetime
 from ..connect import db, BaseModel
 
 from .users import Users
@@ -19,6 +18,8 @@ class Groups(BaseModel):
    def get_data(self):
       """Получаем данные из поля data как словарь."""
       return json.loads(self.data)
+   
+   
 class UserGroup(BaseModel):
    user = ForeignKeyField(Users, backref='groups')  # Связь с пользователем
    group = ForeignKeyField(Groups, backref='members')  # Связь с группой

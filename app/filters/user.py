@@ -7,8 +7,14 @@ from utils.coin import check_coutdown
 
 class Farm(BoundFilter):
     async def check(self, message: Message):
-        return check_coutdown(message.from_user.id)
-    
+        text = message.text.lower()
+        return bool(text in ['ферма', 'farm', 'фарма'])
+
+class Wallet(BoundFilter):
+    async def check(self, message: Message):
+        text = message.text.lower()
+        return bool(text in ['кошель', 'гаманець', 'wallet'])
+
 class ShuraChances(BoundFilter):
     async def check(self, message: Message):
         text = message.text.lower()

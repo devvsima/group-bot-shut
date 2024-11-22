@@ -3,25 +3,27 @@ from aiogram.dispatcher.filters import Text, Command
 
 from loader import dp, bot, _
 
-from app.filters.user import Farm
+from app.filters.user import Farm, Wallet
 from utils.coin import get_countdown, coin_count
 from database.service.coin import add_coin
 from app.keyboards.inline.economic import wallet_ikb, market_ikb
 from app.handlers.msg_text import msg_text
 
+from utils.coin import check_coutdown
 
-@dp.message_handler(Text("ферма"), Farm())
-async def farm_command(message: types.Message):
-    coins = coin_count(message.from_user.id) 
-    add_coin(message.from_user.id, coins)
-    await message.reply(msg_text.FARM.format(coins))
-    
-@dp.message_handler(Text("ферма"))
-async def farm_command(message: types.Message):
-    hours, minutes, seconds = get_countdown(message.from_user.id)
-    await message.reply(msg_text.FARM_COOLDOWN.format(hours, minutes, seconds))
 
-@dp.message_handler(Text("кошель"))
+@dp.message_handler(Farm())
+async def _farm(message: types.Message):
+    if check_coutdown(message.from_user.id):
+        coins = coin_count(message.from_user.id) 
+        add_coin(message.from_user.id, coins)
+        await message.reply(msg_text.FARM.format(coins))
+    else:
+        hours, minutes, seconds = get_countdown(message.from_user.id)
+        await message.reply(msg_text.FARM_COOLDOWN.format(hours, minutes, seconds))
+        
+
+@dp.message_handler(Wallet())
 async def money(message: types.Message, user):
     await message.reply(msg_text.WALLET.format(user.coins), reply_markup=wallet_ikb())
     

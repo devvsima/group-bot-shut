@@ -28,8 +28,8 @@ def get_countdown(user_id):
 def coin_count(user_id):
     from random import randint
     current_time = datetime.now()
-    time_since_last_use = current_time - last_usage[user_id]
-    hours_since_last_use = time_since_last_use.total_seconds() / 3600
-    multiplier = 1 + (hours_since_last_use - 6) * 0.1  # Начинаем рост после 6 часов
+    # time_since_last_use = current_time - last_usage[user_id]
+    # hours_since_last_use = time_since_last_use.total_seconds() / 3600
+    # multiplier = 1 + (hours_since_last_use - 6) * 0.1  # Начинаем рост после 6 часов
     multiplier = 1
     return randint(1, 51) * multiplier

@@ -38,4 +38,4 @@ class ShuraShip(BoundFilter):
 class ShuraZov(BoundFilter):
     async def check(self, message: Message):
         text = message.text.lower()
-        return bool(text in ['заклик гоев', 'заклик гоїв'])
+        return bool(text in ['зов гоев', 'заклик гоїв'])
